@@ -4,7 +4,7 @@ import {Route, Routes} from 'react-router-dom'
 
 // Pages
 const HomePage = lazy(() => import('../pages/home'))
-const RandomBeerPage = lazy(() => import('../pages/random-beers-page'))
+const RandomBeerPage = lazy(() => import('../pages/random-beer-page'))
 const AllBeersPage = lazy(() => import('../pages/all-beers-page'))
 
 export function AppRoutes() {
@@ -14,15 +14,15 @@ export function AppRoutes() {
         <Routes>
           <Route path="/" element={<HomePage></HomePage>}></Route>
           <Route
-            path="/random-users"
+            path="/random-beer"
             element={<RandomBeerPage></RandomBeerPage>}
           ></Route>
           <Route
-            path="/all-users"
+            path="/all-beers"
             element={<AllBeersPage></AllBeersPage>}
           ></Route>
           <Route
-            path="/all-users/:page"
+            path="/beer/:page"
             element={<AllBeersPage></AllBeersPage>}
           ></Route>
         </Routes>
